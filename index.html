@@ -147,7 +147,7 @@
       display: flex;
       align-items: center;
       gap: 0.8rem;
-      opacity: 0;
+      
       animation: fadeUp 0.7s 0.2s forwards;
     }
     .hero-tag::before {
@@ -163,7 +163,7 @@
       line-height: 0.95;
       letter-spacing: -0.02em;
       margin-bottom: 1.5rem;
-      opacity: 0;
+      
       animation: fadeUp 0.7s 0.4s forwards;
     }
     .hero-name .line2 {
@@ -177,7 +177,7 @@
       color: var(--text-muted);
       margin-bottom: 2.5rem;
       min-height: 1.8em;
-      opacity: 0;
+      
       animation: fadeUp 0.7s 0.6s forwards;
     }
     .hero-typed .cursor {
@@ -195,14 +195,14 @@
       line-height: 1.7;
       max-width: 560px;
       margin-bottom: 3rem;
-      opacity: 0;
+      
       animation: fadeUp 0.7s 0.8s forwards;
     }
     .hero-cta {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
-      opacity: 0;
+      
       animation: fadeUp 0.7s 1s forwards;
     }
     .btn-primary {
@@ -258,7 +258,7 @@
       display: flex;
       flex-direction: column;
       gap: 2.5rem;
-      opacity: 0;
+      
       animation: fadeLeft 0.7s 1.2s forwards;
     }
     .stat-item { text-align: right; }
@@ -323,13 +323,13 @@
       position: relative;
       overflow: hidden;
       transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-      opacity: 0;
-      transform: translateY(30px);
+      
+      
+      transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s, box-shadow 0.3s;
     }
     .skill-card.visible {
       opacity: 1;
       transform: translateY(0);
-      transition: opacity 0.6s, transform 0.6s, border-color 0.3s, box-shadow 0.3s;
     }
     .skill-card::before {
       content: '';
@@ -387,14 +387,13 @@
       padding: 2rem;
       position: relative;
       overflow: hidden;
-      transition: all 0.3s;
-      opacity: 0;
-      transform: translateY(30px);
+      
+      
+      transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s, box-shadow 0.3s;
     }
     .project-card.visible {
       opacity: 1;
       transform: translateY(0);
-      transition: opacity 0.6s, transform 0.6s, border-color 0.3s, box-shadow 0.3s;
     }
     .project-card:hover {
       border-color: var(--accent2);
@@ -464,13 +463,13 @@
     .timeline-item {
       position: relative;
       padding: 0 0 3rem 2rem;
-      opacity: 0;
-      transform: translateX(-20px);
+      
+      
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
     .timeline-item.visible {
       opacity: 1;
       transform: translateX(0);
-      transition: opacity 0.6s, transform 0.6s;
     }
     .timeline-item::before {
       content: '';
@@ -521,14 +520,13 @@
       display: flex;
       align-items: flex-start;
       gap: 1rem;
-      transition: all 0.3s;
-      opacity: 0;
-      transform: translateY(20px);
+      
+      
+      transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s;
     }
     .cert-card.visible {
       opacity: 1;
       transform: translateY(0);
-      transition: opacity 0.6s, transform 0.6s, border-color 0.3s;
     }
     .cert-card:hover {
       border-color: var(--accent2);
@@ -578,14 +576,13 @@
       text-decoration: none;
       padding: 0.9rem 1.2rem;
       border: 1px solid var(--border);
-      transition: all 0.2s;
-      opacity: 0;
-      transform: translateX(-20px);
+      
+      
+      transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.2s, color 0.2s;
     }
     .contact-link.visible {
       opacity: 1;
       transform: translateX(0);
-      transition: opacity 0.6s, transform 0.6s, border-color 0.2s, color 0.2s;
     }
     .contact-link:hover {
       border-color: var(--accent);
@@ -648,14 +645,14 @@
     ::-webkit-scrollbar-thumb { background: var(--accent); }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
+      from {  transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
     }
     @keyframes fadeLeft {
-      from { opacity: 0; transform: translateX(24px) translateY(-50%); }
+      from {  transform: translateX(24px) translateY(-50%); }
       to   { opacity: 1; transform: translateX(0) translateY(-50%); }
     }
-    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes blink { 50% {  } }
 
     @media (max-width: 768px) {
       .hero-stats { display: none; }
@@ -723,7 +720,7 @@
     <div class="section-label">02 — Capabilities</div>
     <h2 class="section-title">Skills & Stack</h2>
     <div class="skills-grid">
-      <div class="skill-card">
+      <div class="skill-card visible">
         <div class="skill-card-title">Core AI/ML</div>
         <div class="skill-tags">
           <span class="skill-tag">Machine Learning</span>
@@ -734,7 +731,7 @@
           <span class="skill-tag">Data Analysis</span>
         </div>
       </div>
-      <div class="skill-card">
+      <div class="skill-card visible">
         <div class="skill-card-title">Frameworks</div>
         <div class="skill-tags">
           <span class="skill-tag">TensorFlow</span>
@@ -745,7 +742,7 @@
           <span class="skill-tag">Hugging Face</span>
         </div>
       </div>
-      <div class="skill-card">
+      <div class="skill-card visible">
         <div class="skill-card-title">NLP Tooling</div>
         <div class="skill-tags">
           <span class="skill-tag">NLTK</span>
@@ -755,7 +752,7 @@
           <span class="skill-tag">GPT / OpenAI API</span>
         </div>
       </div>
-      <div class="skill-card">
+      <div class="skill-card visible">
         <div class="skill-card-title">Data & Visualization</div>
         <div class="skill-tags">
           <span class="skill-tag">Pandas</span>
@@ -765,7 +762,7 @@
           <span class="skill-tag">Tableau</span>
         </div>
       </div>
-      <div class="skill-card">
+      <div class="skill-card visible">
         <div class="skill-card-title">Deployment & Cloud</div>
         <div class="skill-tags">
           <span class="skill-tag">Flask</span>
@@ -776,7 +773,7 @@
           <span class="skill-tag">AWS Bedrock</span>
         </div>
       </div>
-      <div class="skill-card">
+      <div class="skill-card visible">
         <div class="skill-card-title">Languages & Databases</div>
         <div class="skill-tags">
           <span class="skill-tag">Python</span>
@@ -798,7 +795,7 @@
     <div class="section-label">03 — Work</div>
     <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
-      <div class="project-card">
+      <div class="project-card visible">
         <div class="project-num">01 / PROJECT</div>
         <h3 class="project-title">Cancer Detection<br/>Using AI</h3>
         <div class="project-badge">Deep Learning · Bioinformatics</div>
@@ -817,7 +814,7 @@
           <span class="tech-tag">Seaborn</span>
         </div>
       </div>
-      <div class="project-card">
+      <div class="project-card visible">
         <div class="project-num">02 / PROJECT</div>
         <h3 class="project-title">AI-Powered<br/>Recipe Generator</h3>
         <div class="project-badge">Generative AI · NLP</div>
@@ -844,7 +841,7 @@
     <div class="section-label">04 — Journey</div>
     <h2 class="section-title">Experience</h2>
     <div class="timeline">
-      <div class="timeline-item">
+      <div class="timeline-item visible">
         <div class="exp-date">Aug 2025 — Present</div>
         <div class="exp-role">AI/ML Engineer Intern</div>
         <div class="exp-company">Tensaw Technologies</div>
@@ -853,7 +850,7 @@
           AWS Bedrock, and deploying production-grade AI solutions for real-world use cases.
         </p>
       </div>
-      <div class="timeline-item">
+      <div class="timeline-item visible">
         <div class="exp-date">Oct 2022 — Nov 2022</div>
         <div class="exp-role">Data Science Intern</div>
         <div class="exp-company">Teachnook</div>
@@ -862,7 +859,7 @@
           Delivered two end-to-end data science projects with measurable outcomes.
         </p>
       </div>
-      <div class="timeline-item">
+      <div class="timeline-item visible">
         <div class="exp-date">May 2023</div>
         <div class="exp-role">Full Stack App Dev Intern</div>
         <div class="exp-company">TORC INFOTECH</div>
@@ -917,13 +914,13 @@
           <a href="/cdn-cgi/l/email-protection#72151d021b19131d1414434232151f131b1e5c111d1f" class="contact-link">
             <span class="contact-link-icon">✉</span> <span class="__cf_email__" data-cfemail="6d0a021d04060c020b0b5c5d2d0a000c0401430e0200">[email&#160;protected]</span>
           </a>
-          <a href="https://linkedin.com/in/gopika-ps" target="_blank" class="contact-link">
+          <a href="https://linkedin.com/in/gopika-ps" target="_blank" class="contact-link visible">
             <span class="contact-link-icon">in</span> linkedin.com/in/gopika-ps
           </a>
-          <a href="https://github.com/DOPIKAPS321" target="_blank" class="contact-link">
+          <a href="https://github.com/DOPIKAPS321" target="_blank" class="contact-link visible">
             <span class="contact-link-icon">⌥</span> github.com/DOPIKAPS321
           </a>
-          <a href="tel:+918129418768" class="contact-link">
+          <a href="tel:+918129418768" class="contact-link visible">
             <span class="contact-link-icon">◎</span> +91 81294 18768
           </a>
         </div>
@@ -998,10 +995,13 @@ setTimeout(type, 1400);
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, i * 80);
+      observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.skill-card, .project-card, .timeline-item, .cert-card, .contact-link')
   .forEach(el => observer.observe(el));
